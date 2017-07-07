@@ -1,53 +1,60 @@
-# Application permettant de mettre des expatrier en relation avec des futur expatrier 
- 
-### Limite et problème liés aux besoins 
-Login des utilisateurs 
-Mise en relation 
-Comment faire le match 
-Recherche avant le départ au sur place 
-Géolocalisation 
-Sécurité _( Age, Sexe, contrat d'utilisation)_
+# PROJET IMIE - CHARLES & THOMAS
+
+## Cahier des Charges
 ---
- 
-### Fonctionnalités 
-Recherche des même nationalités dans un pays 
-Mise en relation avec les personne 
-Fonction de message
----
- 
-### Besoins du consommateur 
-Les information des autres utilisateurs 
-Les modalités du voyage 
-Espace utilisateur 
-Inscrption : Mail _(avec confirmation)_, mot de passe, Nationalités, Nom, Prenom,  
-Profil : Nom, Prénom, Age, Sexe, Cause, Bio, Photo, Localisation, Nationalites
---- 
- 
-### Besoins future
-Traduction du site _( Anglais, Allemand,)_
-Reconnaissance faciale sur les photos 
-Réaliser de l'application mobile 
-Gestion de la géolocalisation
----
- 
-### Utilisateur
-S'inscrire / Valider 
-Se connecter 
-Modifier son profil _(nom, âge, sexe, )_/ ou le supprimer 
-Voir le profil des autre utilisateurs 
-Prendre contacter un utilisateurs _( si connecter au profil)_ 
-Rechercher les utilisateur _( recherche affiné si connecter au profil )_ 
+
+### Présentation du Projet
+
+Application permettant de mettre des futurs expatriés en relation avec des expatriés.
+    
+### Limites & Problèmes
+
+Login des Utilisateurs
+Mise en relation
+Comment faire le "match"
+Recherche avant le départ ou sur place
+Géolocalisation
+Sécurité (Âge, Sexe, Contrat d'Utilisation)
+
+### Fonctionnalité du Site
+
+Recherche des mêmes nationalités dans un pays
+Mise en relation avec les expatriés
+Fonction de messagerie
+
+#### Besoins du Consommateur
+Les Informations des autres utilisateurs
+Les Modalités du voyage
+Espace utilisateur
+Inscription : Mail (avec Confirmation)
+Profil : Nom, Prénom, Âge, Sexe, Cause du voyage, Bio, Photo, Nationalité, Localisation (Ville, Pays)
+
+#### Besoins Futurs
+Traduction du site (Anglais, Espagnol)
+Reconnaissance Faciale sur les photos
+Réaliser de l'application mobile
+Gestion de la Géolocalisation
+
+#### Utilisateurs
+S'inscrire / Valider
+Se connecter
+Modifier son profil (Nom, Âge, Sexe)
+Voir le profil des autres utilisateurs
+Prendre contact un utilisateur (si connexion valide)
+Recherche les utilisateurs (recherche affinée si connexion valide)
 Ajouter sa photo
---- 
- 
-### Admin
-Supprimer un compte  
-Bloquer un compte 
-Ajouter des fonctionnalités 
-Gestion de la base de donné 
-Mise a jour du site 
-SAV 
-Création du site 
-Création de la base de donné 
-Accés à tous les profils
----
+
+#### Administrateur
+
+Supprimer un compte pour cause de non connexion depuis une certaine durée ou pour non respect sur le profil d'un autre utilisateur
+Bloquer un compte pour les mêmes causes qu'avant
+Ajouter des fonctionnalités
+Gestion de la base de données
+Mise à jour du site
+SAV
+Création du Site
+Création de la base de données
+Accès à tous les profils
+
+### Arborescence du Projet
+
