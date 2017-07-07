@@ -1,6 +1,6 @@
-#Application permettant de mettre des expatrier en relation avec des futur expatrier 
+# Application permettant de mettre des expatrier en relation avec des futur expatrier 
  
-###Limite et problème liés aux besoins 
+### Limite et problème liés aux besoins 
 Login des utilisateurs 
 Mise en relation 
 Comment faire le match 
@@ -9,13 +9,13 @@ Géolocalisation
 Sécurité _( Age, Sexe, contrat d'utilisation)_
 ---
  
-###Fonctionnalités 
+### Fonctionnalités 
 Recherche des même nationalités dans un pays 
 Mise en relation avec les personne 
 Fonction de message
 ---
  
-###Besoins du consommateur 
+### Besoins du consommateur 
 Les information des autres utilisateurs 
 Les modalités du voyage 
 Espace utilisateur 
@@ -23,14 +23,14 @@ Inscrption : Mail _(avec confirmation)_, mot de passe, Nationalités, Nom, Preno
 Profil : Nom, Prénom, Age, Sexe, Cause, Bio, Photo, Localisation, Nationalites
 --- 
  
-###Besoins future
+### Besoins future
 Traduction du site _( Anglais, Allemand,)_
 Reconnaissance faciale sur les photos 
 Réaliser de l'application mobile 
 Gestion de la géolocalisation
 ---
  
-###Utilisateur
+### Utilisateur
 S'inscrire / Valider 
 Se connecter 
 Modifier son profil _(nom, âge, sexe, )_/ ou le supprimer 
@@ -40,7 +40,7 @@ Rechercher les utilisateur _( recherche affiné si connecter au profil )_
 Ajouter sa photo
 --- 
  
-###Admin
+### Admin
 Supprimer un compte  
 Bloquer un compte 
 Ajouter des fonctionnalités 
