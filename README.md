@@ -3,6 +3,31 @@
 ## Cahier des Charges
 ---
 
+### Phases du Projet
+
+#### Cahier des Charges
+Exprimer les besoins / 
+Exprimer les limitations et problèmes liés aux besoins / 
+Solution techniques pour y remédier / 
+Décrire les fonctionnalités / 
+Faire un choix technologique
+
+#### Etude du Design
+Wireframe (Représentation des vues de l'application) / Mockup (Phase aboutie de l'étude)
+
+#### Etudes des Données
+Dictionnaire des Données (Recherche de l'ensemble des données nécessaires à la création de la BDD) / 
+Création de la BDD
+
+#### Code
+#### Test d'Utilisation (Version Beta)
+
+#### Déploiement
+Mise en Production / Vie du Projet / Retour des Utilisateurs / Correction des bugs / Mise à jour
+
+#### Après lancement
+Changement de langue / Nouvelles Fonctionnalités
+
 ### Présentation du Projet
 
 Application permettant de mettre des futurs expatriés en relation avec des expatriés.
@@ -56,5 +81,13 @@ Création du Site
 Création de la base de données
 Accès à tous les profils
 
-### Arborescence du Projet
+### Technologies du Projet
+
+HTML / CSS3
+JavaScript
+PHP
+Base de Données
+Photoshop
+MySql
+
 
