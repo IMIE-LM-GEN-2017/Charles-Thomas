@@ -1,4 +1,7 @@
+# Virtual machine
+/.vagrant/
+/puphpet/config-custom.yaml
+/puphpet/files/dot/ssh/
 
-Nounce/db.php
-Nounce/doc/include/db.php
-Nounce/include/db.php
+# working dirs
+/data/
