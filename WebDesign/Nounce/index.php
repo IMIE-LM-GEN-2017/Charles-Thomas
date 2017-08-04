@@ -10,7 +10,7 @@ include('design/header.html')
   <div class="row home">
     <div class="col-md-12 text-center">
       <img src="" id="logo">logo</img>
-      <h4> Vous n'etes plus seul, Nounce sommes la </h4>
+      <h4> Vous n'êtes plus seul, Nounce sommes la </h4>
       <button class="btn-outline-secondary" href="#"> Connexion </button>
     </div>
     <nav class="navbar navbar-default navbar-fixed-bottom">
