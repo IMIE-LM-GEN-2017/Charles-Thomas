@@ -3,6 +3,7 @@
 /puphpet/config-custom.yaml
 /puphpet/files/dot/ssh/
 
-# working dirs
-/data/
 # Config
+/serveur/include/db.php
+
+WebDesign/
