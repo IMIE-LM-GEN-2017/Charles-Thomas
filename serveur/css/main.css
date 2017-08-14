@@ -23,6 +23,9 @@ span.glyphicon-th-large {
     background-position: top center;
 }
 
+.col-md-12.mg{
+    height: 50px;
+}
 
 /* Navigateur Home */
 
