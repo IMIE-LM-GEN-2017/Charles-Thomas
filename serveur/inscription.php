@@ -22,35 +22,35 @@
     <!-- <script src="js/npm.js"></script> -->
 </head>
 <body>
-
     <div class="container-fluid">
         <div class="row home">
           <div class="col-md-12 mg"></div>
           <div class="col-md-4 col-md-offset-4">
-            <form>
+            <div><h2>Inscription</h2></div>
+          <form>
               <div class="form-group">
-                <label for="InputEmail">Nom</label>
-                <input type="text" class="form-control" id="InputEmail1" placeholder="Nom">
+                <label for="InputNom">Nom</label>
+                <input type="text" class="form-control" id="InputNom" placeholder="Nom">
               </div>
               <div class="form-group">
-                <label for="InputEmail">Prenom</label>
-                <input type="text" class="form-control" id="InputEmail1" placeholder="Prenom">
+                <label for="InputPrenom">Prénom</label>
+                <input type="text" class="form-control" id="InputPrenom" placeholder="Prénom">
               </div>
               <div class="form-group">
-                <label for="InputEmail">Pseudo</label>
-                <input type="text" class="form-control" id="InputEmail1" placeholder="Pseudo">
+                <label for="InputPseudo">Pseudo</label>
+                <input type="text" class="form-control" id="InputPseudo" placeholder="Pseudo">
               </div>
               <div class="form-group">
-                <label for="InputEmail">Email address</label>
-                <input type="email" class="form-control" id="InputEmail1" placeholder="Email">
+                <label for="InputEmail">Email</label>
+                <input type="email" class="form-control" id="InputEmail" placeholder="Email">
               </div>
               <div class="form-group">
-                <label for="InputPassword">Password</label>
-                <input type="password" class="form-control" id="InputPassword1" placeholder="Password">
+                <label for="InputPassword">Mot de Passe</label>
+                <input type="password" class="form-control" id="InputPassword" placeholder="Mot de Passe">
               </div>
               <div class="form-group">
-                <label for="InputPasswordConfirmation">Confirmation Password</label>
-                <input type="password" class="form-control" id="InputPassword1" placeholder="Confirmer Password">
+                <label for="InputPasswordConfirmation">Confirmation Mot de Passe</label>
+                <input type="password" class="form-control" id="InputPasswordConfirmation" placeholder="Confirmation du Mot de Passe">
               </div>
               <button type="submit" class="btn btn-default go">Go!</button>
               <a href="index.html" class="btn btn-default go">Retour à la page d'Accueil</a>
@@ -75,7 +75,7 @@
                             <li><a href="presentation.php"> Presentation </a></li>
                             <li><a href="#"> x </a></li>
                             <li><a href="#"> Références </a></li>
-                            <li><a href="#"> Contact </a></li>
+                            <li><a href="contact.html"> Contact </a></li>
                         </ul>
                     </div>
                 </nav>
