@@ -4,7 +4,7 @@
   require_once('include/function.php');
 
   //lien header
-  $titrePage= "Presentation de Nounce";
+  $titrePage= "Nounce";
   include('design/header.php');
 ?>
 
