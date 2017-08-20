@@ -30,15 +30,15 @@
             <form>
               <div class="form-group">
                 <label for="InputEmail">Nom</label>
-                <input type="email" class="form-control" id="InputEmail1" placeholder="Nom">
+                <input type="text" class="form-control" id="InputEmail1" placeholder="Nom">
               </div>
               <div class="form-group">
                 <label for="InputEmail">Prenom</label>
-                <input type="email" class="form-control" id="InputEmail1" placeholder="Prenom">
+                <input type="text" class="form-control" id="InputEmail1" placeholder="Prenom">
               </div>
               <div class="form-group">
                 <label for="InputEmail">Pseudo</label>
-                <input type="email" class="form-control" id="InputEmail1" placeholder="Pseudo">
+                <input type="text" class="form-control" id="InputEmail1" placeholder="Pseudo">
               </div>
               <div class="form-group">
                 <label for="InputEmail">Email address</label>
