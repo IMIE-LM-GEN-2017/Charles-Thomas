@@ -53,6 +53,7 @@
                 <input type="password" class="form-control" id="InputPassword1" placeholder="Confirmer Password">
               </div>
               <button type="submit" class="btn btn-default go">Go!</button>
+              <a href="index.html" class="btn btn-default go">Retour à la page d'Accueil</a>
             </form>
           </div>
 
