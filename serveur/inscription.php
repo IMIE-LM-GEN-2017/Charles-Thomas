@@ -55,7 +55,7 @@
               <tr>
               <div id="dateNaissance">
               <td> <label for="dateNaissance"> Date de Naissance :</label> </td>
-              <td><select name="jour" id="jour">  <option value="">Jour</option><!--le jour-->
+              <td><select name="jour" id="jour" class="colortext">  <option value="">Jour</option><!--le jour-->
                  <option value="1">1</option>
                  <option value="2">2</option>
                  <option value="3">3</option>
@@ -89,7 +89,7 @@
                  <option value="31">31</option>
               </select></td>
 
-              <td><select name="mois" id="mois" >  <option value="" >Mois</option><!--le mois-->
+              <td><select name="mois" id="mois" class="colortext">  <option value="" >Mois</option><!--le mois-->
                 <option value="1">Janvier</option>
                 <option value="2">Février</option>
                 <option value="3">Mars</option>
@@ -104,7 +104,7 @@
                 <option value="12">Décembre</option>
               </select></td>
 
-              <td><select  name="annee" id="annee">  <option value="">Année</option><!--l'année-->
+              <td><select  name="annee" id="annee" class="colortext">  <option value="">Année</option><!--l'année-->
                 <option value="2013">2013</option>
                 <option value="2012">2012</option>
                 <option value="2011">2011</option>

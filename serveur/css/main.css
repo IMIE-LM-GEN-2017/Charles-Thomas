@@ -75,6 +75,10 @@ span.glyphicon-th-large {
   border-radius: 15px;
 }
 
+.colortext{
+  color: #005cff;
+}
+
 .row.bottom{
   width: 100%;
   position: absolute;
