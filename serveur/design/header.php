@@ -45,7 +45,7 @@
                     </div>
                     <div class="col-md-5">
                       <div class="form-group">
-                        <input type="password" class="form-control sub" placeholder="password">
+                        <input type="password" class="form-control sub" placeholder="mot de passe">
                       </div>
                     </div>
                     <div class="col-md-2">
