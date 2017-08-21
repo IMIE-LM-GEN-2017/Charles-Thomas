@@ -17,23 +17,23 @@ function verifierFormulaire($champs){
   }
 
 $testDuFormulaire = verifierFormulaire(['nom', 'prenom', 'pseudo', 'sexe',
-        'date_naissance', 'nounce', 'email', 'mdp', 'confirmation_mdp']);
+        'date_naissance', 'nounce', 'disponible', 'email', 'mdp']);
 if($testDuFormulaire === False){
   echo "C'est Faux";
 } elseif($testDuFormulaire === true) {
-  if($_POST['mdp'] === $_POST['confirmation_mdp']){
+  if($_POST['mdp'] === $_POST['mdp2']){
   echo "Le Formulaire est valide.";
   // Traitement et enregistrements
-  $sql="INSERT INTO utilisateurs (nom, prenom, pseudo, sexe, date_naissance, nounce, email, mdp, confirmation_mdp)
+  $sql="INSERT INTO utilisateurs (nom, prenom, pseudo, sexe, date_naissance, nounce, disponible, email, mdp)
         VALUES (' " . mysqli_real_escape_string($connection, $_POST['nom']) . " ',
                 '". mysqli_real_escape_string($connection, $_POST['prenom']) . " ',
                 '". mysqli_real_escape_string($connection, $_POST['pseudo']) . " ',
                 '". mysqli_real_escape_string($connection, $_POST['sexe']) . " ',
                 '". mysqli_real_escape_string($connection, $_POST['date_naissance']) . " ',
                 '". mysqli_real_escape_string($connection, $_POST['nounce']) . " ',
+                '". mysqli_real_escape_string($connection, $_POST['disponible']) . " ',
                 '". mysqli_real_escape_string($connection, $_POST['email']) . " ',
-                '". mysqli_real_escape_string($connection, md5($_POST['mdp'])) . " ',
-                '". mysqli_real_escape_string($connection, md5($_POST['confirmation_mdp'])) . " ')";
+                '". mysqli_real_escape_string($connection, md5($_POST['mdp'])) . " ')";
   var_dump($sql);
   if (mysqli_query($connection, $sql)){
       echo '<div class="alert alert-success">
@@ -118,6 +118,13 @@ if($testDuFormulaire === False){
                 <div id="nouncenon"><input type="radio" value="0" name="nounce"/> Non</div>
               </div>
               <div class="form-group">
+              <div id="disponible">
+                <label for="disponible"> Disponible :</label>
+              </div>
+                <div id="disponibleoui"><input type="radio" value="1" name="disponible" /> Oui</div>
+                <div id="disponiblenon"><input type="radio" value="0" name="disponible"/> Non</div>
+              </div>
+              <div class="form-group">
                 <label for="email">Email :</label>
                 <input type="email" class="form-control" id="email" name="email" placeholder="Email">
               </div>
@@ -126,8 +133,8 @@ if($testDuFormulaire === False){
                 <input type="password" class="form-control" id="mdp" name="mdp" placeholder="Mot de Passe">
               </div>
               <div class="form-group">
-                <label for="confirmation_mdp">Confirmation Mot de Passe :</label>
-                <input type="password" class="form-control" id="confirmation_mdp" name="confirmation_mdp" placeholder="Confirmation du Mot de Passe">
+                <label for="mdp2">Confirmation Mot de Passe :</label>
+                <input type="password" class="form-control" id="mdp2" name="mdp2" placeholder="Confirmation du Mot de Passe">
               </div>
               <button type="submit" class="btn btn-default go">Go!</button>
               <a href="index.html" class="btn btn-default go">Retour à la page d'Accueil</a>
