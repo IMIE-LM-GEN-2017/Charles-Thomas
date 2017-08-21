@@ -40,6 +40,23 @@
                 <label for="InputPseudo">Pseudo</label>
                 <input type="text" class="form-control" id="InputPseudo" placeholder="Pseudo">
               </div>
+              <div id="sexe">
+              <!-- <td><label for="sexe">sexe:</label></td>
+              <td> <input type="radio" value="Homme" name="sexe" /> Homme</td>
+              <td> <input type="radio" value="femme"  name="sexe"/> femme</td>
+              </tr>-->
+              <div id="labelsexe">
+              <label for="sexe"> Sexe :</label>
+              </div>
+              <div id="h">
+              <input type="radio" value="Homme" name="sexe" /> Homme
+              </div>
+
+              <div id="f">
+              <input type="radio" value="femme"  name="sexe"/> femme
+              </div>
+              </div>
+
               <div class="form-group">
                 <label for="InputEmail">Email</label>
                 <input type="email" class="form-control" id="InputEmail" placeholder="Email">
