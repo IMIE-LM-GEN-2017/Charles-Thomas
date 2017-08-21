@@ -45,16 +45,11 @@
               <td> <input type="radio" value="Homme" name="sexe" /> Homme</td>
               <td> <input type="radio" value="femme"  name="sexe"/> femme</td>
               </tr>-->
-              <div id="labelsexe">
+              <div id="sexe">
               <label for="sexe"> Sexe :</label>
               </div>
-              <div id="h">
-              <input type="radio" value="Homme" name="sexe" /> Homme
-              </div>
-
-              <div id="f">
-              <input type="radio" value="femme"  name="sexe"/> femme
-              </div>
+              <div id="h"><input type="radio" value="Homme" name="sexe" /> Homme</div>
+              <div id="f"><input type="radio" value="femme"  name="sexe"/> femme</div>
               </div>
 
               <div class="form-group">
