@@ -23,6 +23,10 @@ span.glyphicon-th-large {
     background-position: top center;
 }
 
+#marge {
+  padding-bottom: 80px;
+}
+
 .col-md-12.mg{
     height: 50px;
 }

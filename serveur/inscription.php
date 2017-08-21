@@ -1,3 +1,57 @@
+<?php
+require_once('include/db.php');
+require_once('include/function.php');
+function verifierFormulaire($champs){
+  if(count($_POST)>0){
+    for($i=0; $i<count($champs); $i++){
+      if(
+        !isset($_POST[$champs[$i]])
+        || empty($_POST[$champs[$i]])
+      ){
+          return false;
+      }
+    }
+    return true;
+  }
+    return null;
+  }
+$testDuFormulaire = verifierFormulaire(['nom', 'prenom', 'pseudo', 'sexe',
+        'date_naissance', 'nounce', 'email', 'mdp', 'confirmation_mdp']);
+if($testDuFormulaire === False){
+  echo "C'est Faux";
+} elseif($testDuFormulaire === true) {
+  if($_POST['mdp'] === $_POST['confirmation_mdp']){
+  echo "Le Formulaire est valide.";
+  // Traitement et enregistrements
+  $sql="INSERT INTO utilisateurs (nom, prenom, pseudo, sexe, date_naissance, nounce, email, mdp, confirmation_mdp)
+        VALUES (' " . mysqli_real_escape_string($connection, $_POST['nom']) . " ',
+                '". mysqli_real_escape_string($connection, $_POST['prenom']) . " ',
+                '". mysqli_real_escape_string($connection, $_POST['pseudo']) . " ',
+                '". mysqli_real_escape_string($connection, $_POST['sexe']) . " ',
+                '". mysqli_real_escape_string($connection, $_POST['date_naissance']) . " ',
+                '". mysqli_real_escape_string($connection, $_POST['nounce']) . " ',
+                '". mysqli_real_escape_string($connection, $_POST['email']) . " ',
+                '". mysqli_real_escape_string($connection, md5($_POST['mdp'])) . " ',
+                '". mysqli_real_escape_string($connection, md5($_POST['confirmation_mdp'])) . " ')";
+  //var_dump($sql);
+  if (mysqli_query($connection, $sql)){
+      echo '<div class="alert alert-success">
+      L\'enregistrement a bien été effectué</div>';
+  } else {
+      echo '<div class="alert alert-danger">
+      L\'enregistrement de l\'adresse a échoué.';
+      echo mysqli_error($connection);
+      echo "<pre>$sql</pre>";
+      echo '</div>';
+    }
+  } else {
+      echo alert('danger', "Les Mots de passe ne correspondent pas.");
+  }
+      echo '<a href="index.html">Retours à la liste</a> </br>';
+} else {
+  echo "Le Formulaire n'a pas été envoyé";
+}
+?>
 <!doctype html>
 <html lang="fr">
 <head>
@@ -25,20 +79,20 @@
     <div class="container-fluid">
         <div class="row home">
           <div class="col-md-12 mg"></div>
-          <div class="col-md-4 col-md-offset-4">
+          <div class="col-md-4 col-md-offset-4" id="marge">
             <div><h2>Inscription</h2></div>
-          <form>
+          <form method="POST" action ="">
               <div class="form-group">
-                <label for="InputNom">Nom :</label>
-                <input type="text" class="form-control" id="InputNom" placeholder="Nom">
+                <label for="nom">Nom :</label>
+                <input type="text" class="form-control" id="nom" name="nom" placeholder="Nom">
               </div>
               <div class="form-group">
-                <label for="InputPrenom">Prénom :</label>
-                <input type="text" class="form-control" id="InputPrenom" placeholder="Prénom">
+                <label for="prenom">Prénom :</label>
+                <input type="text" class="form-control" id="prenom" name="prenom" placeholder="Prénom">
               </div>
               <div class="form-group">
-                <label for="InputPseudo">Pseudo :</label>
-                <input type="text" class="form-control" id="InputPseudo" placeholder="Pseudo">
+                <label for="pseudo">Pseudo :</label>
+                <input type="text" class="form-control" id="pseudo" name="pseudo" placeholder="Pseudo">
               </div>
               <!-- <td><label for="sexe">sexe:</label></td>
               <td> <input type="radio" value="Homme" name="sexe" /> Homme</td>
@@ -53,9 +107,9 @@
               </div>
               <div class="form-group">
               <tr>
-              <div id="dateNaissance">
-              <td> <label for="dateNaissance"> Date de Naissance :</label> </td>
-              <td><select name="jour" id="jour" class="colortext">  <option value="">Jour</option><!--le jour-->
+              <div id="date_naissance">
+              <td> <label for="date_naissance"> Date de Naissance :</label> </td>
+              <td><select name="date_naissance" id="jour" class="colortext">  <option value="">Jour</option><!--le jour-->
                  <option value="1">1</option>
                  <option value="2">2</option>
                  <option value="3">3</option>
@@ -84,27 +138,27 @@
                  <option value="26">26</option>
                  <option value="27">27</option>
                  <option value="28">28</option>
-                 <option value="29" >29</option>
+                 <option value="29">29</option>
                  <option value="30">30</option>
                  <option value="31">31</option>
               </select></td>
 
-              <td><select name="mois" id="mois" class="colortext">  <option value="" >Mois</option><!--le mois-->
+              <td><select name="date_naissance" id="mois" class="colortext">  <option value="" >Mois</option><!--le mois-->
                 <option value="1">Janvier</option>
                 <option value="2">Février</option>
                 <option value="3">Mars</option>
                 <option value="4">Avril</option>
                 <option value="5">Mai</option>
                 <option value="6">Juin</option>
-                <option value="7" >Juillet</option>
-                <option value="8">Aout</option>
+                <option value="7">Juillet</option>
+                <option value="8">Août</option>
                 <option value="9">Septembre</option>
                 <option value="10">Octobre</option>
                 <option value="11">Novembre</option>
                 <option value="12">Décembre</option>
               </select></td>
 
-              <td><select  name="annee" id="annee" class="colortext">  <option value="">Année</option><!--l'année-->
+              <td><select  name="date_naissace" id="annee" class="colortext">  <option value="">Année</option><!--l'année-->
                 <option value="2013">2013</option>
                 <option value="2012">2012</option>
                 <option value="2011">2011</option>
@@ -188,19 +242,6 @@
                 <option value="1933">1933</option>
                 <option value="1932">1932</option>
                 <option value="1931">1931</option>
-                <option value="1930">1930</option>
-                <option value="1929">1929</option>
-                <option value="1928">1928</option>
-                <option value="1927">1927</option>
-                <option value="1926">1926</option>
-                <option value="1925">1925</option>
-                <option value="1924">1924</option>
-                <option value="1923">1923</option>
-                <option value="1922">1922</option>
-                <option value="1921">1921</option>
-                <option value="1920">1920</option>
-                <option value="1919">1919</option>
-                <option value="1918">1918</option>
                 </select>
                 </div>
               </div>
@@ -208,26 +249,25 @@
               <div id="nounce">
                 <label for="nounce"> Nounce :</label>
               </div>
-                <div id="nounceoui"><input type="radio" value="nounce" name="nounce" /> Nounce</div>
-                <div id="nouncenon"><input type="radio" value="voyageur" name="voyageur"/> Voyageur</div>
+                <div id="local"><input type="radio" value="local" name="nounce" /> Nounce</div>
+                <div id="voyageur"><input type="radio" value="voyageur" name="nounce"/> Voyageur</div>
               </div>
               <div class="form-group">
-                <label for="InputEmail">Email :</label>
-                <input type="email" class="form-control" id="InputEmail" placeholder="Email">
+                <label for="email">Email :</label>
+                <input type="email" class="form-control" id="email" placeholder="Email">
               </div>
               <div class="form-group">
-                <label for="InputPassword">Mot de Passe :</label>
-                <input type="password" class="form-control" id="InputPassword" placeholder="Mot de Passe">
+                <label for="mdp">Mot de Passe :</label>
+                <input type="password" class="form-control" id="mdp" placeholder="Mot de Passe">
               </div>
               <div class="form-group">
-                <label for="InputPasswordConfirmation">Confirmation Mot de Passe :</label>
-                <input type="password" class="form-control" id="InputPasswordConfirmation" placeholder="Confirmation du Mot de Passe">
+                <label for="confirmation_mdp">Confirmation Mot de Passe :</label>
+                <input type="password" class="form-control" id="confirmation_mdp" placeholder="Confirmation du Mot de Passe">
               </div>
               <button type="submit" class="btn btn-default go">Go!</button>
               <a href="index.html" class="btn btn-default go">Retour à la page d'Accueil</a>
             </form>
           </div>
-
           <!-- menu footer -->
             <nav class="navbar navbar-default navbar-fixed-bottom">
                 <div class="container-fluid" id="menu-principal">
