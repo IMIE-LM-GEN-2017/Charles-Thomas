@@ -1,6 +1,5 @@
 <?php
 require_once('include/db.php');
-require_once('include/function.php');
 function verifierFormulaire($champs){
   if(count($_POST)>0){
     for($i=0; $i<count($champs); $i++){
