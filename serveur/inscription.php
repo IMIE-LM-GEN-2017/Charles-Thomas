@@ -1,56 +1,86 @@
-<!doctype html>
-<html lang="fr">
-<head>
-    <meta charset="utf-8">
-    <!-- character set ( afiichage des caractéres ) -->
-    <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <!-- compatibilité avec les navigateurs -->
-    <title>Nounce</title>
-    <meta name="description" content="">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+<?php
+//lien de connection
+require_once('include/db.php');
+require_once('include/function.php');
 
-    <!-- Place favicon.ico in the root directory -->
-    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+//lien header
+$titrePage= "";
+/*include('design/header.php');*/
 
-    <!-- Déclaration Bootstrap -->
-    <link rel="stylesheet" href="css/bootstrap.css">
-    <link rel="stylesheet" href="css/main.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+$testFormulaire= verifierFormulaire(['nom','prenom','pseudo','InputEmail','mdp','mdp2']);
 
-    <!-- Scripts JS -->
-    <script src="js/bootstrap.js"></script>
-    <!-- <script src="js/npm.js"></script> -->
-</head>
-<body>
+if($testFormulaire === false){
+  echo "C'est faux";
+  var_dump($_POST);
+
+} elseif ($testFormulaire ===true){
+  if($_POST['mdp']===$_POST['mdp2']){
+  echo "Le formulaire est valide";
+  // traitement et enregistrement
+  $sql="INSERT INTO utilisateurs (nom ,prenom, pseudo, email, mdp, confirmation_mdp)
+        VALUES ('" .mysqli_real_escape_string($connection, $_POST['nom']) ." ',
+                '" .mysqli_real_escape_string($connection, $_POST['prenom']) ." ',
+                '" .mysqli_real_escape_string($connection, $_POST['pseudo']) ." ',
+                '" .mysqli_real_escape_string($connection, $_POST['InputEmail']) ." ',
+                '" .mysqli_real_escape_string($connection, md5($_POST['mdp'])) ." ',
+                '" .mysqli_real_escape_string($connection, md5($_POST['mdp2'])) ." ')";
+
+
+  if(mysqli_query($connection, $sql)){
+    echo '<div class="alert alert-success">
+    L\'enregistrement a bien été éffectué </div>';
+  }else{
+  echo'<div class="alert alert-danger">L\'enregistrement à échoué <br>';
+  echo mysqli_error($connection);
+  echo '</div>';
+  }
+} else {
+  echo
+        "Les mots de passe ne corresponde pas";
+}
+  echo'<a href="recherche.php"> Retours à la liste </a>';
+} else {
+  echo alert('danger', "Les mots de passe ne correspondent pas");
+}
+
+if($testFormulaire !== true):
+
+  $sql="SELECT * FROM utilisateurs";
+  if(!$adresses = mysqli_query($connection, $sql)):
+    echo '<div class="alert alert-danger"> Une erreur est survenue'
+      . mysqli_error($connection)
+      . '</div>';
+  else:
+?>
 
     <div class="container-fluid">
         <div class="row home">
           <div class="col-md-12 mg"></div>
           <div class="col-md-4 col-md-offset-4">
-            <form>
+            <form action="inscription.php" mathod="POST">
               <div class="form-group">
-                <label for="InputEmail">Nom</label>
-                <input type="email" class="form-control" id="InputEmail1" placeholder="Nom">
+                <label for="nom">Nom</label>
+                <input type="text" class="form-control" id="nom" placeholder="Nom">
               </div>
               <div class="form-group">
-                <label for="InputEmail">Prenom</label>
-                <input type="email" class="form-control" id="InputEmail1" placeholder="Prenom">
+                <label for="prenom">Prenom</label>
+                <input type="text" class="form-control" id="prenom" placeholder="Prenom">
               </div>
               <div class="form-group">
-                <label for="InputEmail">Pseudo</label>
-                <input type="email" class="form-control" id="InputEmail1" placeholder="Pseudo">
+                <label for="pseudo">Pseudo</label>
+                <input type="text" class="form-control" id="pseudo" placeholder="Pseudo">
               </div>
               <div class="form-group">
                 <label for="InputEmail">Email address</label>
-                <input type="email" class="form-control" id="InputEmail1" placeholder="Email">
+                <input type="email" class="form-control" id="InputEmail" placeholder="Email">
               </div>
               <div class="form-group">
-                <label for="InputPassword">Password</label>
-                <input type="password" class="form-control" id="InputPassword1" placeholder="Password">
+                <label for="mdp">Password</label>
+                <input type="password" class="form-control" id="mdp" placeholder="Password">
               </div>
               <div class="form-group">
-                <label for="InputPasswordConfirmation">Confirmation Password</label>
-                <input type="password" class="form-control" id="InputPassword1" placeholder="Confirmer Password">
+                <label for="mdp2">Confirmation Password</label>
+                <input type="password" class="form-control" id="mdp2" placeholder="Confirmer Password">
               </div>
               <button type="submit" class="btn btn-default go">Go!</button>
             </form>
@@ -81,5 +111,9 @@
             </div>
         </div>
     </div>
-</body>
-</html>
+
+  <?php
+  endif;
+  endif;
+  include ('design/footer.php');
+  ?>

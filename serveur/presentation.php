@@ -7,7 +7,13 @@
   $titrePage= "Nounce";
   include('design/header.php');
 ?>
+    <div class="container-fluid">
+      <div class="row">
+        
 
+      </div>
+
+    </div>
 
 <?php
   include('design/footer.php');
