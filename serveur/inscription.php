@@ -5,7 +5,7 @@ function verifierFormulaire($champs){
     for($i=0; $i<count($champs); $i++){
       if(
         !isset($_POST[$champs[$i]])
-        || empty($_POST[$champs[$i]])
+        || $_POST[$champs[$i]]===''
       ){
           return false;
       }
@@ -33,7 +33,6 @@ if($testDuFormulaire === False){
                 '". mysqli_real_escape_string($connection, $_POST['disponible']) . " ',
                 '". mysqli_real_escape_string($connection, $_POST['email']) . " ',
                 '". mysqli_real_escape_string($connection, md5($_POST['mdp'])) . " ')";
-  var_dump($sql);
   if (mysqli_query($connection, $sql)){
       echo '<div class="alert alert-success">
       L\'enregistrement a bien été effectué</div>';
@@ -49,7 +48,7 @@ if($testDuFormulaire === False){
   }
       echo '<a href="index.html">Retours à la liste</a> </br>';
 } else {
-  echo "Le Formulaire n'a pas été envoyé";
+//  echo "Le Formulaire n'a pas été envoyé";
 }
 ?>
 <!doctype html>
