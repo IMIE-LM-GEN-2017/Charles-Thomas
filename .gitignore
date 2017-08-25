@@ -1,14 +1,9 @@
+# Virtual machine
+/.vagrant/
+/puphpet/config-custom.yaml
+/puphpet/files/dot/ssh/
 
-serveur/include/db.php
-.vagrant/machines/nounce/virtualbox/action_provision
-WebDesign/NounceDesign.psd
-WebDesign/Logo Nounce.ai
-WebDesign/Capture.PNG
-serveur/inscriptionfront.php
-connexion.php
-.vagrant/machines/nounce/virtualbox/vagrant_cwd
-.vagrant/machines/nounce/virtualbox/synced_folders
-.vagrant/machines/nounce/virtualbox/index_uuid
-.vagrant/machines/nounce/virtualbox/id
-.vagrant/machines/nounce/virtualbox/creator_uid
-.vagrant/machines/nounce/virtualbox/action_set_name
+# Config
+/serveur/include/db.php
+
+WebDesign/
