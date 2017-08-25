@@ -12,7 +12,7 @@ function verifierFormulaire($champs){
     }
     return true;
   }
-    return null;
+    return nul;
   }
 
 $testDuFormulaire = verifierFormulaire(['nom', 'prenom', 'pseudo', 'sexe',
