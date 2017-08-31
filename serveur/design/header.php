@@ -49,7 +49,7 @@
                       </div>
                     </div>
                     <div class="col-md-2">
-                      <button type="submit" class="btn btn-default go">Go!</button>
+                      <button type="submit" class="btn btn-default go">Connexion</button>
                     </div>
                   </form>
               </div>
