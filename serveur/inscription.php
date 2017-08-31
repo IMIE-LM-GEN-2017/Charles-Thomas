@@ -17,21 +17,19 @@ function verifierFormulaire($champs)
 }
 
 $testDuFormulaire = verifierFormulaire(['nom', 'prenom', 'pseudo', 'sexe',
-    'date_naissance', 'nounce', 'disponible', 'email', 'mdp']);
+    'date_naissance', 'email', 'mdp']);
 if ($testDuFormulaire === False) {
 //  echo "C'est Faux";
 } elseif ($testDuFormulaire === true) {
     if ($_POST['mdp'] === $_POST['mdp2']) {
         //echo "Le Formulaire est valide.";
         // Traitement et enregistrements
-        $sql = "INSERT INTO utilisateurs (nom, prenom, pseudo, sexe, date_naissance, nounce, disponible, email, mdp)
+        $sql = "INSERT INTO utilisateurs (nom, prenom, pseudo, sexe, date_naissance, email, mdp)
         VALUES (' " . mysqli_real_escape_string($connection, $_POST['nom']) . " ',
                 '" . mysqli_real_escape_string($connection, $_POST['prenom']) . " ',
                 '" . mysqli_real_escape_string($connection, $_POST['pseudo']) . " ',
                 '" . mysqli_real_escape_string($connection, $_POST['sexe']) . " ',
                 '" . mysqli_real_escape_string($connection, $_POST['date_naissance']) . " ',
-                '" . mysqli_real_escape_string($connection, $_POST['nounce']) . " ',
-                '" . mysqli_real_escape_string($connection, $_POST['disponible']) . " ',
                 '" . mysqli_real_escape_string($connection, $_POST['email']) . " ',
                 '" . mysqli_real_escape_string($connection, md5($_POST['mdp'])) . " ')";
         if (mysqli_query($connection, $sql)) {
@@ -108,20 +106,6 @@ if ($testDuFormulaire === False) {
                 <div class="form-group">
                     <label for="date_naissance"> Date de Naissance :</label>
                     <input type="date" name="date_naissance" class="colortext">
-                </div>
-                <div class="form-group">
-                    <div id="nounce">
-                        <label for="nounce"> Nounce :</label>
-                    </div>
-                    <div id="nounceoui"><input type="radio" value="1" name="nounce"/> Oui</div>
-                    <div id="nouncenon"><input type="radio" value="0" name="nounce"/> Non</div>
-                </div>
-                <div class="form-group">
-                    <div id="disponible">
-                        <label for="disponible"> Disponible :</label>
-                    </div>
-                    <div id="disponibleoui"><input type="radio" value="1" name="disponible"/> Oui</div>
-                    <div id="disponiblenon"><input type="radio" value="0" name="disponible"/> Non</div>
                 </div>
                 <div class="form-group">
                     <label for="email">Email :</label>
