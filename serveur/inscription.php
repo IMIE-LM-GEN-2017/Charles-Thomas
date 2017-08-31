@@ -46,7 +46,7 @@ if($testDuFormulaire === False){
   } else {
       echo alert('danger', "Les Mots de passe ne correspondent pas.");
   }
-      echo '<a href="index.html">Retours à la liste</a> </br>';
+      echo '<a href="index.html">Inscription réussie, retour à la page d\'accueil</a> </br>';
 } else {
 //  echo "Le Formulaire n'a pas été envoyé";
 }
