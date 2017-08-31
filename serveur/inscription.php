@@ -40,7 +40,7 @@ if ($testDuFormulaire === False) {
             //    L\'enregistrement a bien été effectué</div>';
         } else {
             //    echo '<div class="alert alert-danger">
-            L\'enregistrement de l\'adresse a échoué.';
+            echo 'L\'enregistrement de l\'adresse a échoué.';
             //    echo mysqli_error($connection);
             //    echo "<pre>$sql</pre>";
             //    echo '</div>';
