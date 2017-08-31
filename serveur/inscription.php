@@ -35,10 +35,10 @@ if($testDuFormulaire === False){
                 '". mysqli_real_escape_string($connection, md5($_POST['mdp'])) . " ')";
   if (mysqli_query($connection, $sql)){
   //    echo '<div class="alert alert-success">
-      L\'enregistrement a bien été effectué</div>';
+  //    L\'enregistrement a bien été effectué</div>';
   } else {
   //    echo '<div class="alert alert-danger">
-      L\'enregistrement de l\'adresse a échoué.';
+  //    L\'enregistrement de l\'adresse a échoué.';
   //    echo mysqli_error($connection);
   //    echo "<pre>$sql</pre>";
   //    echo '</div>';
