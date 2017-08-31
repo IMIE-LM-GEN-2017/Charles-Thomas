@@ -44,7 +44,7 @@ if($testDuFormulaire === False){
   //    echo '</div>';
     }
   } else {
-      echo alert('danger', "Les Mots de passe ne correspondent pas.");
+      echo 'Les Mots de passe ne correspondent pas.';
   }
       echo '<a href="index.html">Inscription réussie, retour à la page d\'accueil</a> </br>';
 } else {
