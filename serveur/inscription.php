@@ -18,10 +18,10 @@ function verifierFormulaire($champs){
 $testDuFormulaire = verifierFormulaire(['nom', 'prenom', 'pseudo', 'sexe',
         'date_naissance', 'nounce', 'disponible', 'email', 'mdp']);
 if($testDuFormulaire === False){
-  echo "C'est Faux";
+//  echo "C'est Faux";
 } elseif($testDuFormulaire === true) {
   if($_POST['mdp'] === $_POST['mdp2']){
-  echo "Le Formulaire est valide.";
+  //echo "Le Formulaire est valide.";
   // Traitement et enregistrements
   $sql="INSERT INTO utilisateurs (nom, prenom, pseudo, sexe, date_naissance, nounce, disponible, email, mdp)
         VALUES (' " . mysqli_real_escape_string($connection, $_POST['nom']) . " ',
@@ -34,14 +34,14 @@ if($testDuFormulaire === False){
                 '". mysqli_real_escape_string($connection, $_POST['email']) . " ',
                 '". mysqli_real_escape_string($connection, md5($_POST['mdp'])) . " ')";
   if (mysqli_query($connection, $sql)){
-      echo '<div class="alert alert-success">
+  //    echo '<div class="alert alert-success">
       L\'enregistrement a bien été effectué</div>';
   } else {
-      echo '<div class="alert alert-danger">
+  //    echo '<div class="alert alert-danger">
       L\'enregistrement de l\'adresse a échoué.';
-      echo mysqli_error($connection);
-      echo "<pre>$sql</pre>";
-      echo '</div>';
+  //    echo mysqli_error($connection);
+  //    echo "<pre>$sql</pre>";
+  //    echo '</div>';
     }
   } else {
       echo alert('danger', "Les Mots de passe ne correspondent pas.");
