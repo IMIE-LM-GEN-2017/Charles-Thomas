@@ -23,7 +23,7 @@
           <div class="col-md-1"><a href="index.html"><img src="img/nouncemenu.png" height="120%" width="120%"></a></div>
           <div class="col-md-10"></div>
           <div class="col-md-1 text-center" onclick="openNav()">
-            <span class="glyphicon glyphicon-th-large"></span>
+            <span class="glyphicon glyphicon-th-large" style="color:#196cff"></span>
           </div>
 
           <!-- menu déroulant -->

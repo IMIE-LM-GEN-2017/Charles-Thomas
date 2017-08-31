@@ -42,8 +42,8 @@ span.glyphicon-th-large {
 /* Button */
 
 .btn-outline-secondary {
-    background-color: #196cff;
-    color: white;
+    background-color: white;
+    color: #196cff;
     transition: all .5s;
     border: 1px solid white;
     border-radius: 15px;

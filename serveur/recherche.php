@@ -19,7 +19,8 @@
            <h5><strong>Ville:</strong> label</h5>
            <h5><strong>Age:</strong> label</h5>
            <h5><strong>Sexe:</strong> label</h5>
-           <p><a href="#" class="btn btn-primary" role="button">Button</a> <a href="#" class="btn btn-default" role="button">Button</a></p>
+             <p><a href="#" class="btn btn-default go" role="button">Button</a> <a href="#" class="btn btn-default" role="button">Button</a>
+
          </div>
        </div>
       </div>
@@ -33,7 +34,7 @@
            <h5><strong>Ville:</strong> label</h5>
            <h5><strong>Age:</strong> label</h5>
            <h5><strong>Sexe:</strong> label</h5>
-           <p><a href="#" class="btn btn-primary" role="button">Button</a> <a href="#" class="btn btn-default" role="button">Button</a></p>
+             <p><a href="#" class="btn btn-default go" role="button">Button</a> <a href="#" class="btn btn-default" role="button">Button</a>
          </div>
        </div>
       </div>
@@ -47,7 +48,7 @@
            <h5><strong>Ville:</strong> label</h5>
            <h5><strong>Age:</strong> label</h5>
            <h5><strong>Sexe:</strong> label</h5>
-           <p><a href="#" class="btn btn-primary" role="button">Button</a> <a href="#" class="btn btn-default" role="button">Button</a></p>
+             <p><a href="#" class="btn btn-default go" role="button">Button</a> <a href="#" class="btn btn-default" role="button">Button</a>
          </div>
        </div>
       </div>
@@ -61,7 +62,7 @@
            <h5><strong>Ville:</strong> label</h5>
            <h5><strong>Age:</strong> label</h5>
            <h5><strong>Sexe:</strong> label</h5>
-           <p><a href="#" class="btn btn-primary" role="button">Button</a> <a href="#" class="btn btn-default" role="button">Button</a></p>
+             <p><a href="#" class="btn btn-default go" role="button">Button</a> <a href="#" class="btn btn-default" role="button">Button</a>
          </div>
        </div>
       </div>
@@ -75,7 +76,7 @@
            <h5><strong>Ville:</strong> label</h5>
            <h5><strong>Age:</strong> label</h5>
            <h5><strong>Sexe:</strong> label</h5>
-           <p><a href="#" class="btn btn-primary" role="button">Button</a> <a href="#" class="btn btn-default" role="button">Button</a></p>
+             <p><a href="#" class="btn btn-default go" role="button">Button</a> <a href="#" class="btn btn-default" role="button">Button</a>
          </div>
        </div>
       </div>
@@ -89,7 +90,7 @@
            <h5><strong>Ville:</strong> label</h5>
            <h5><strong>Age:</strong> label</h5>
            <h5><strong>Sexe:</strong> label</h5>
-           <p><a href="#" class="btn btn-primary" role="button">Button</a> <a href="#" class="btn btn-default" role="button">Button</a></p>
+             <p><a href="#" class="btn btn-default go" role="button">Button</a> <a href="#" class="btn btn-default" role="button">Button</a>
          </div>
        </div>
       </div>
@@ -103,7 +104,7 @@
            <h5><strong>Ville:</strong> label</h5>
            <h5><strong>Age:</strong> label</h5>
            <h5><strong>Sexe:</strong> label</h5>
-           <p><a href="#" class="btn btn-primary" role="button">Button</a> <a href="#" class="btn btn-default" role="button">Button</a></p>
+             <p><a href="#" class="btn btn-default go" role="button">Button</a> <a href="#" class="btn btn-default" role="button">Button</a>
          </div>
        </div>
       </div>
@@ -117,7 +118,7 @@
            <h5><strong>Ville:</strong> label</h5>
            <h5><strong>Age:</strong> label</h5>
            <h5><strong>Sexe:</strong> label</h5>
-           <p><a href="#" class="btn btn-primary" role="button">Button</a> <a href="#" class="btn btn-default" role="button">Button</a></p>
+             <p><a href="#" class="btn btn-default go" role="button">Button</a> <a href="#" class="btn btn-default" role="button">Button</a>
          </div>
        </div>
       </div>
