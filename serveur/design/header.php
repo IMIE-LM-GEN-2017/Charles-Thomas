@@ -40,12 +40,12 @@
                 <form>
                     <div class="col-md-5">
                       <div class="form-group">
-                        <input type="text" class="form-control sub" placeholder="email">
+                        <input type="text" class="form-control sub" placeholder="Adresse Mail">
                       </div>
                     </div>
                     <div class="col-md-5">
                       <div class="form-group">
-                        <input type="password" class="form-control sub" placeholder="mot de passe">
+                        <input type="password" class="form-control sub" placeholder="Mot de Passe">
                       </div>
                     </div>
                     <div class="col-md-2">
