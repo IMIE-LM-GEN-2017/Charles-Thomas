@@ -159,7 +159,7 @@ if ($testDuFormulaire === False) {
                         <li><a href="presentation.php"> Présentation </a></li>
                         <li><a href="recherche.php"> Recherche </a></li>
                         <li><a href="references.php"> Références </a></li>
-                        <li><a href="contact.html"> Contact </a></li>
+                        <li><a href="contact.php"> Contact </a></li>
                     </ul>
                 </div>
         </nav>
