@@ -14,18 +14,17 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
         <script src="js/bootstrap.js"></script> <!-- Scripts JS -->
         <script src="js/main.js"></script> <!-- Navigation lateral -->
-
-        <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:400,700" rel="stylesheet"> <!--Google Font -->
+        <script src="js/bootstrap.js"></script>
 
 	</head>
     <body>
       <!-- Barre de menu -->
       <div class="container-fluid">
         <div class="row" id="page">
-          <div class="col-md-1"><a href="presentation.php"><img src="img/nouncemenu.png" height="120%" width="120%"></a></div>
+          <div class="col-md-1"><a href="index.html"><img src="img/nouncemenu.png" height="120%" width="120%"></a></div>
           <div class="col-md-10"></div>
           <div class="col-md-1 text-center" onclick="openNav()">
-            <span class="glyphicon glyphicon-th-large"></span>
+            <span class="glyphicon glyphicon-th-large" style="color:#196cff"></span>
           </div>
 
           <!-- menu déroulant -->
@@ -38,20 +37,28 @@
               <a href="#">Contact</a>
 
               <!-- connection menu deroulant -->
-              <div class="row bottom">
-                <form>
+                <div class="row bottom">
+                    <div class="collapse navbar-collapse" id="menu">
+                        <ul class="nav navbar-nav">
+                            <li><a href="presentation.php"> Présentation </a></li>
+                            <li><a href="recherche.php"> Recherche </a></li>
+                            <li><a href="references.php"> Références </a></li>
+                            <li><a href="contact.php"> Contact </a></li>
+                        </ul>
+                    </div>
+                        <form>
                     <div class="col-md-5">
                       <div class="form-group">
-                        <input type="text" class="form-control sub" placeholder="email">
+                        <input type="text" class="form-control sub" placeholder="Adresse Mail">
                       </div>
                     </div>
                     <div class="col-md-5">
                       <div class="form-group">
-                        <input type="password" class="form-control sub" placeholder="password">
+                        <input type="password" class="form-control sub" placeholder="Mot de Passe">
                       </div>
                     </div>
                     <div class="col-md-2">
-                      <button type="submit" class="btn btn-default go">Go!</button>
+                      <button type="submit" class="btn btn-default go">Connexion</button>
                     </div>
                   </form>
               </div>
