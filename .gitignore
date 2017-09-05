@@ -6,5 +6,9 @@
 # Config
 /serveur/include/db.php
 
+<<<<<<< HEAD
 WebDesign/
 serveur/Nounce/.htaccess
+=======
+WebDesign/
+>>>>>>> Developpement

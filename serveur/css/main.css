@@ -1,6 +1,12 @@
 /*button menu */
+<<<<<<< HEAD
 body{
   font-family: 'Roboto Slab', serif;
+=======
+
+span.glyphicon-th-large {
+    font-size: 1.5em;
+>>>>>>> Developpement
 }
 
 .home {
@@ -20,6 +26,7 @@ body{
 
 #menu-principal {
     background-position: top center;
+<<<<<<< HEAD
 }
 
 .col-md-12.mg{
@@ -40,6 +47,16 @@ body{
 
 .para{
   font-size: 180%;
+=======
+}
+
+#marge {
+  padding-bottom: 80px;
+}
+
+.col-md-12.mg{
+    height: 50px;
+>>>>>>> Developpement
 }
 
 /* Navigateur Home */
@@ -90,6 +107,13 @@ body{
   border-radius: 15px;
 }
 
+<<<<<<< HEAD
+=======
+.colortext{
+  color: #005cff;
+}
+
+>>>>>>> Developpement
 .row.bottom{
   width: 100%;
   position: absolute;
@@ -118,11 +142,15 @@ body{
     transition: 0.5s;
     /* 0.5 second transition effect to slide in the sidenav */
     box-shadow: -5px 9px 10px 5px rgba(25, 108, 255, .3);
+<<<<<<< HEAD
 }
 
 span.glyphicon-th-large {
     font-size: 1.5em;
+=======
+>>>>>>> Developpement
 }
+
 
 /* The navigation menu links */
 
@@ -171,4 +199,11 @@ span.glyphicon-th-large {
     .sidenav a {
         font-size: 18px;
     }
+<<<<<<< HEAD
+=======
+}
+
+.img-img{
+  height: 40px;
+>>>>>>> Developpement
 }

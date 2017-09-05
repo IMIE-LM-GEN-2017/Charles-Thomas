@@ -24,7 +24,11 @@
           <div class="col-md-1"><a href="index.html"><img src="img/nouncemenu.png" height="120%" width="120%"></a></div>
           <div class="col-md-10"></div>
           <div class="col-md-1 text-center" onclick="openNav()">
+<<<<<<< HEAD
             <span class="glyphicon glyphicon-th-large" style="color:#196cff"></span>
+=======
+            <span class="glyphicon glyphicon-th-large"></span>
+>>>>>>> Developpement
           </div>
 
           <!-- menu déroulant -->
@@ -37,6 +41,7 @@
               <a href="#">Contact</a>
 
               <!-- connection menu deroulant -->
+<<<<<<< HEAD
                 <div class="row bottom">
                     <div class="collapse navbar-collapse" id="menu">
                         <ul class="nav navbar-nav">
@@ -50,15 +55,30 @@
                     <div class="col-md-5">
                       <div class="form-group">
                         <input type="text" class="form-control sub" placeholder="Adresse Mail">
+=======
+              <div class="row bottom">
+                <form>
+                    <div class="col-md-5">
+                      <div class="form-group">
+                        <input type="text" class="form-control sub" placeholder="email">
+>>>>>>> Developpement
                       </div>
                     </div>
                     <div class="col-md-5">
                       <div class="form-group">
+<<<<<<< HEAD
                         <input type="password" class="form-control sub" placeholder="Mot de Passe">
                       </div>
                     </div>
                     <div class="col-md-2">
                       <button type="submit" class="btn btn-default go">Connexion</button>
+=======
+                        <input type="password" class="form-control sub" placeholder="mot de passe">
+                      </div>
+                    </div>
+                    <div class="col-md-2">
+                      <button type="submit" class="btn btn-default go">Go!</button>
+>>>>>>> Developpement
                     </div>
                   </form>
               </div>
