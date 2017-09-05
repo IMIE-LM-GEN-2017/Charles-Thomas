@@ -1,7 +1,6 @@
 /*button menu */
-
-span.glyphicon-th-large {
-    font-size: 1.5em;
+body{
+  font-family: 'Roboto Slab', serif;
 }
 
 .home {
@@ -25,6 +24,22 @@ span.glyphicon-th-large {
 
 .col-md-12.mg{
     height: 50px;
+}
+
+/* Presentation */
+.col-md-6.foo{
+  font-family: 'Roboto Slab', serif;
+  color: #004082;
+  margin-top: 50px;
+}
+
+.col-md-6.foo>h2{
+  font-size: 300%;
+  font-weight: bold;
+}
+
+.para{
+  font-size: 180%;
 }
 
 /* Navigateur Home */
@@ -105,6 +120,9 @@ span.glyphicon-th-large {
     box-shadow: -5px 9px 10px 5px rgba(25, 108, 255, .3);
 }
 
+span.glyphicon-th-large {
+    font-size: 1.5em;
+}
 
 /* The navigation menu links */
 

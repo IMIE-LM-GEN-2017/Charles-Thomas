@@ -15,12 +15,14 @@
         <script src="js/bootstrap.js"></script> <!-- Scripts JS -->
         <script src="js/main.js"></script> <!-- Navigation lateral -->
 
+        <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:400,700" rel="stylesheet"> <!--Google Font -->
+
 	</head>
     <body>
       <!-- Barre de menu -->
       <div class="container-fluid">
         <div class="row" id="page">
-          <div class="col-md-1"><a href="index.html"><img src="img/nouncemenu.png" height="120%" width="120%"></a></div>
+          <div class="col-md-1"><a href="presentation.php"><img src="img/nouncemenu.png" height="120%" width="120%"></a></div>
           <div class="col-md-10"></div>
           <div class="col-md-1 text-center" onclick="openNav()">
             <span class="glyphicon glyphicon-th-large"></span>
