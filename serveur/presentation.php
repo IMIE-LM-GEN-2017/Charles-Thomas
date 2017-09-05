@@ -45,7 +45,7 @@
               <h2>Le services Nounce</h2>
               <p class="para">
                 Nous vous proposons une recherche des potentiels expatriers sur votre futur territoire,
-                vous pouvez ainsi vous mettre en relation et commercer à échanger. 
+                vous pouvez ainsi vous mettre en relation et commercer à échanger.
               </p>
             </div>
           </div>
