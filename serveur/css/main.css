@@ -1,4 +1,4 @@
-}
+
 /*button menu */
 body{
     font-family: 'Roboto Slab', serif;
@@ -25,6 +25,7 @@ body{
 
 #marge {
     padding-bottom: 80px;
+}
 
 .col-md-12.mg{
     height: 50px;

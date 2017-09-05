@@ -121,7 +121,6 @@ if ($testDuFormulaire === False) {
                            placeholder="Confirmation du Mot de Passe">
                 </div>
                 <button type="submit" class="btn btn-default go">Go!</button>
-                <a href="index.html" class="btn btn-default go">Retour à la page d'Accueil</a>
             </form>
         </div>
         <!-- menu footer -->

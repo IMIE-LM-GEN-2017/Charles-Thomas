@@ -6,6 +6,7 @@ require_once('include/function.php');
 //lien header
 $titrePage= "Nounce";
 include('design/header.php');
+
 ?>
 <div class="container-fluid">
   <div class="row">
