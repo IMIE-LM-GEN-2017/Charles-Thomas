@@ -10,6 +10,10 @@
   <div class="container-fluid">
     <div class="row">
       <!-- Profil -->
+<<<<<<< HEAD
+      <?php for($i=0; $i<100; $i++): ?>
+=======
+>>>>>>> Developpement
       <div class="col-sm-6 col-md-4">
         <div class="thumbnail">
          <img src="img/profil.jpg" alt="...">
@@ -23,6 +27,10 @@
          </div>
        </div>
       </div>
+<<<<<<< HEAD
+    <?php endfor ?>
+
+=======
 
       <div class="col-sm-6 col-md-4">
         <div class="thumbnail">
@@ -122,5 +130,6 @@
        </div>
       </div>
 
+>>>>>>> Developpement
     </div>
   </div>

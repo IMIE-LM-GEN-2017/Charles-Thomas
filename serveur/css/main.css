@@ -1,7 +1,12 @@
 /*button menu */
+<<<<<<< HEAD
+body{
+  font-family: 'Roboto Slab', serif;
+=======
 
 span.glyphicon-th-large {
     font-size: 1.5em;
+>>>>>>> Developpement
 }
 
 .home {
@@ -21,6 +26,28 @@ span.glyphicon-th-large {
 
 #menu-principal {
     background-position: top center;
+<<<<<<< HEAD
+}
+
+.col-md-12.mg{
+    height: 50px;
+}
+
+/* Presentation */
+.col-md-6.foo{
+  font-family: 'Roboto Slab', serif;
+  color: #004082;
+  margin-top: 50px;
+}
+
+.col-md-6.foo>h2{
+  font-size: 300%;
+  font-weight: bold;
+}
+
+.para{
+  font-size: 180%;
+=======
 }
 
 #marge {
@@ -29,6 +56,7 @@ span.glyphicon-th-large {
 
 .col-md-12.mg{
     height: 50px;
+>>>>>>> Developpement
 }
 
 /* Navigateur Home */
@@ -79,10 +107,13 @@ span.glyphicon-th-large {
   border-radius: 15px;
 }
 
+<<<<<<< HEAD
+=======
 .colortext{
   color: #005cff;
 }
 
+>>>>>>> Developpement
 .row.bottom{
   width: 100%;
   position: absolute;
@@ -111,6 +142,13 @@ span.glyphicon-th-large {
     transition: 0.5s;
     /* 0.5 second transition effect to slide in the sidenav */
     box-shadow: -5px 9px 10px 5px rgba(25, 108, 255, .3);
+<<<<<<< HEAD
+}
+
+span.glyphicon-th-large {
+    font-size: 1.5em;
+=======
+>>>>>>> Developpement
 }
 
 
@@ -161,8 +199,11 @@ span.glyphicon-th-large {
     .sidenav a {
         font-size: 18px;
     }
+<<<<<<< HEAD
+=======
 }
 
 .img-img{
   height: 40px;
+>>>>>>> Developpement
 }

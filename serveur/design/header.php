@@ -14,6 +14,7 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
         <script src="js/bootstrap.js"></script> <!-- Scripts JS -->
         <script src="js/main.js"></script> <!-- Navigation lateral -->
+        <script src="js/bootstrap.js"></script>
 
 	</head>
     <body>
@@ -23,7 +24,11 @@
           <div class="col-md-1"><a href="index.html"><img src="img/nouncemenu.png" height="120%" width="120%"></a></div>
           <div class="col-md-10"></div>
           <div class="col-md-1 text-center" onclick="openNav()">
+<<<<<<< HEAD
+            <span class="glyphicon glyphicon-th-large" style="color:#196cff"></span>
+=======
             <span class="glyphicon glyphicon-th-large"></span>
+>>>>>>> Developpement
           </div>
 
           <!-- menu déroulant -->
@@ -36,20 +41,44 @@
               <a href="#">Contact</a>
 
               <!-- connection menu deroulant -->
+<<<<<<< HEAD
+                <div class="row bottom">
+                    <div class="collapse navbar-collapse" id="menu">
+                        <ul class="nav navbar-nav">
+                            <li><a href="presentation.php"> Présentation </a></li>
+                            <li><a href="recherche.php"> Recherche </a></li>
+                            <li><a href="references.php"> Références </a></li>
+                            <li><a href="contact.php"> Contact </a></li>
+                        </ul>
+                    </div>
+                        <form>
+                    <div class="col-md-5">
+                      <div class="form-group">
+                        <input type="text" class="form-control sub" placeholder="Adresse Mail">
+=======
               <div class="row bottom">
                 <form>
                     <div class="col-md-5">
                       <div class="form-group">
                         <input type="text" class="form-control sub" placeholder="email">
+>>>>>>> Developpement
                       </div>
                     </div>
                     <div class="col-md-5">
                       <div class="form-group">
+<<<<<<< HEAD
+                        <input type="password" class="form-control sub" placeholder="Mot de Passe">
+                      </div>
+                    </div>
+                    <div class="col-md-2">
+                      <button type="submit" class="btn btn-default go">Connexion</button>
+=======
                         <input type="password" class="form-control sub" placeholder="mot de passe">
                       </div>
                     </div>
                     <div class="col-md-2">
                       <button type="submit" class="btn btn-default go">Go!</button>
+>>>>>>> Developpement
                     </div>
                   </form>
               </div>
