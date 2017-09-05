@@ -1,5 +1,3 @@
-<?php
-?>
 <!doctype html>
 <html lang="fr">
     <head>
@@ -35,7 +33,7 @@
           <div id="mySidenav" class="sidenav">
             <div class="container-fluid">
               <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-              <a href="#">Profil</a>
+              <a href="profil.php">Profil</a>
               <a href="#">Services</a>
               <a href="#">Clients</a>
               <a href="#">Contact</a>
@@ -74,3 +72,4 @@
       <!-- /Barre de menu -->
 
       <!-- Contenu de la page (Dans les pages php)-->
+      ?>
