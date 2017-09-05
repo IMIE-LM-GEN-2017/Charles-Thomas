@@ -38,14 +38,6 @@
 
               <!-- connection menu deroulant -->
                 <div class="row bottom">
-                    <div class="collapse navbar-collapse" id="menu">
-                        <ul class="nav navbar-nav">
-                            <li><a href="presentation.php"> Présentation </a></li>
-                            <li><a href="recherche.php"> Recherche </a></li>
-                            <li><a href="references.php"> Références </a></li>
-                            <li><a href="contact.php"> Contact </a></li>
-                        </ul>
-                    </div>
                         <form>
                     <div class="col-md-5">
                       <div class="form-group">
@@ -61,7 +53,16 @@
                       <button type="submit" class="btn btn-default go">Connexion</button>
                     </div>
                   </form>
-              </div>
+                    <div class="collapse navbar-collapse" id="menu">
+                        <ul class="nav navbar-nav">
+                            <li><a href="presentation.php"> Présentation </a></li>
+                            <li><a href="recherche.php"> Recherche </a></li>
+                            <li><a href="references.php"> Références </a></li>
+                            <li><a href="contact.php"> Contact </a></li>
+                        </ul>
+                    </div>
+
+                </div>
             </div>
           </div>
         </div>

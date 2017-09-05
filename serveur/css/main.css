@@ -1,7 +1,7 @@
+}
 /*button menu */
-
-span.glyphicon-th-large {
-    font-size: 1.5em;
+body{
+    font-family: 'Roboto Slab', serif;
 }
 
 .home {
@@ -24,11 +24,26 @@ span.glyphicon-th-large {
 }
 
 #marge {
-  padding-bottom: 80px;
-}
+    padding-bottom: 80px;
 
 .col-md-12.mg{
     height: 50px;
+}
+
+/* Presentation */
+.col-md-6.foo{
+    font-family: 'Roboto Slab', serif;
+    color: #004082;
+    margin-top: 50px;
+}
+
+.col-md-6.foo>h2{
+    font-size: 300%;
+    font-weight: bold;
+}
+
+.para{
+    font-size: 180%;
 }
 
 /* Navigateur Home */
@@ -42,8 +57,8 @@ span.glyphicon-th-large {
 /* Button */
 
 .btn-outline-secondary {
-    background-color: white;
-    color: #196cff;
+    background-color: #196cff;
+    color: white;
     transition: all .5s;
     border: 1px solid white;
     border-radius: 15px;
@@ -61,11 +76,11 @@ span.glyphicon-th-large {
 /* button menu */
 
 .btn.btn-default.go{
-  background-color: #196cff;
-  color: white;
-  transition: all .5s;
-  border: 1px solid white;
-  border-radius: 15px;
+    background-color: #196cff;
+    color: white;
+    transition: all .5s;
+    border: 1px solid white;
+    border-radius: 15px;
 }
 
 .btn.btn-default.go:hover {
@@ -73,20 +88,16 @@ span.glyphicon-th-large {
 }
 
 .form-control.sub{
-  color: #005cff;
-  transition: all .5s;
-  border: 1px solid #005cff;
-  border-radius: 15px;
-}
-
-.colortext{
-  color: #005cff;
+    color: #005cff;
+    transition: all .5s;
+    border: 1px solid #005cff;
+    border-radius: 15px;
 }
 
 .row.bottom{
-  width: 100%;
-  position: absolute;
-  bottom: 20px;
+    width: 100%;
+    position: absolute;
+    bottom: 20px;
 }
 
 /* The side navigation menu */
@@ -113,6 +124,9 @@ span.glyphicon-th-large {
     box-shadow: -5px 9px 10px 5px rgba(25, 108, 255, .3);
 }
 
+span.glyphicon-th-large {
+    font-size: 1.5em;
+}
 
 /* The navigation menu links */
 
