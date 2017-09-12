@@ -23,7 +23,7 @@
       <!-- Barre de menu -->
       <div class="container-fluid">
         <div class="row" id="page">
-            <div class="col-md-1"><a href="presentation.php"><img src="img/nouncemenu.png"></a></div>
+            <div class="col-md-1"><a href="presentation.php"><img src="img/nouncemenu.png" class="img-img"></a></div>
           <div class="col-md-10"></div>
           <div class="col-md-1 text-center" onclick="openNav()">
             <span class="glyphicon glyphicon-th-large" style="color:#196cff"></span>
