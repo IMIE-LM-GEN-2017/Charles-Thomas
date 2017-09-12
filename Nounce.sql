@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Client :  localhost
--- Généré le :  Jeu 31 Août 2017 à 11:49
+-- Généré le :  Mar 12 Septembre 2017 à 10:39
 -- Version du serveur :  5.7.19-0ubuntu0.16.04.1
 -- Version de PHP :  7.0.22-0ubuntu0.16.04.1
 
@@ -631,8 +631,8 @@ CREATE TABLE `utilisateurs` (
   `date_naissance` date NOT NULL,
   `email` varchar(60) NOT NULL,
   `note` int(1) DEFAULT NULL,
-  `disponible` tinyint(1) NOT NULL,
-  `nounce` tinyint(3) NOT NULL
+  `disponible` tinyint(1) DEFAULT NULL,
+  `nounce` tinyint(3) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
@@ -640,12 +640,12 @@ CREATE TABLE `utilisateurs` (
 --
 
 INSERT INTO `utilisateurs` (`id`, `pseudo`, `nom`, `prenom`, `mdp`, `sexe`, `date_naissance`, `email`, `note`, `disponible`, `nounce`) VALUES
-(6, 'Samuel ', ' Lemuel ', 'Sam ', '202cb962ac59075b964b07152d234b70 ', 'Femme', '1994-04-24', 'Sam.Lemuel@nounce.fr ', NULL, 0, 1),
-(7, 'Lyonel ', ' Lyono', 'Neil ', '202cb962ac59075b964b07152d234b70 ', 'Homme', '1985-05-15', 'Neil.Lyo@nounce.fr ', NULL, 0, 0),
-(8, 'Victor ', ' Othor ', 'Vic ', '202cb962ac59075b964b07152d234b70 ', 'Homme', '1996-06-26', 'Vic.Othor@nounce.fr ', NULL, 1, 1),
-(9, 'Christopher ', ' Topher ', 'Chris ', '202cb962ac59075b964b07152d234b70 ', 'Homme', '1991-11-11', 'Chris.Topher@nounce.fr ', NULL, 0, 0),
-(10, 'Marcel ', ' Ele ', 'Marc ', '202cb962ac59075b964b07152d234b70 ', 'Homme', '1984-04-04', 'Marc.Ele@nounce.fr ', NULL, 1, 1),
-(11, 'DaïQuest ', ' Mounianman ', 'Julien ', '202cb962ac59075b964b07152d234b70 ', 'Homme', '1996-01-05', 'julienmounianman@gmail.com ', NULL, 1, 0);
+(6, 'Samuel ', ' Lemuel ', 'Sam ', '202cb962ac59075b964b07152d234b70 ', 'Femme', '1994-04-24', 'Sam.Lemuel@nounce.fr ', NULL, NULL, NULL),
+(7, 'Lyonel ', ' Lyono', 'Neil ', '202cb962ac59075b964b07152d234b70 ', 'Homme', '1985-05-15', 'Neil.Lyo@nounce.fr ', NULL, NULL, NULL),
+(8, 'Victor ', ' Othor ', 'Vic ', '202cb962ac59075b964b07152d234b70 ', 'Homme', '1996-06-26', 'Vic.Othor@nounce.fr ', NULL, NULL, NULL),
+(9, 'Christopher ', ' Topher ', 'Chris ', '202cb962ac59075b964b07152d234b70 ', 'Homme', '1991-11-11', 'Chris.Topher@nounce.fr ', NULL, NULL, NULL),
+(10, 'Marcel ', ' Ele ', 'Marc ', '202cb962ac59075b964b07152d234b70 ', 'Homme', '1984-04-04', 'Marc.Ele@nounce.fr ', NULL, NULL, NULL),
+(11, 'DaïQuest ', ' Mounianman ', 'Julien ', '202cb962ac59075b964b07152d234b70 ', 'Homme', '1996-01-05', 'julienmounianman@gmail.com ', NULL, NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -657,10 +657,17 @@ CREATE TABLE `voyages` (
   `id` int(11) NOT NULL,
   `pays` varchar(50) NOT NULL,
   `ville` varchar(60) NOT NULL,
-  `date_depart` date NOT NULL,
   `date_arrivee` date NOT NULL,
-  `duree` timestamp() NOT NULL DEFAULT CURRENT_TIMESTAMP
+  `date_depart` date NOT NULL,
+  `duree` timestamp(6) NOT NULL DEFAULT CURRENT_TIMESTAMP
 ) ;
+
+--
+-- Contenu de la table `voyages`
+--
+
+INSERT INTO `voyages` (`id`, `pays`, `ville`, `date_arrivee`, `date_depart`, `duree`, `id_statuts`, `libelle_pays`) VALUES
+(1, 'Zimbabwe', 'Harare', '2017-09-01', '2017-09-20', '2017-09-13 07:13:36.000000', 3, 'ZIM');
 
 --
 -- Index pour les tables exportées
@@ -728,12 +735,12 @@ ALTER TABLE `statuts`
 -- AUTO_INCREMENT pour la table `utilisateurs`
 --
 ALTER TABLE `utilisateurs`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 --
 -- AUTO_INCREMENT pour la table `voyages`
 --
 ALTER TABLE `voyages`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT AUTO_INCREMENT=1;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
