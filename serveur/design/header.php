@@ -37,27 +37,12 @@
 
               <!-- connection menu deroulant -->
                 <div class="row bottom">
-                        <form>
-                    <div class="col-md-5">
-                      <div class="form-group">
-                        <input type="text" class="form-control sub" placeholder="Adresse Mail">
-                      </div>
-                    </div>
-                    <div class="col-md-5">
-                      <div class="form-group">
-                        <input type="password" class="form-control sub" placeholder="Mot de Passe">
-                      </div>
-                    </div>
-                    <div class="col-md-2">
-                      <button type="submit" class="btn btn-default go">Connexion</button>
-                    </div>
-                  </form>
                     <div class="collapse navbar-collapse" id="menu">
                         <ul class="nav navbar-nav">
-                            <li><a href="presentation.php"> Présentation </a></li>
-                            <li><a href="recherche.php"> Recherche </a></li>
-                            <li><a href="references.php"> Références </a></li>
-                            <li><a href="contact.php"> Contact </a></li>
+                            <li><a href="presentation.php"><button class="btn btn-default go"> Présentation </button></a></li>
+                            <li><a href="recherche.php"><button class="btn btn-default go"> Recherche </button></a></li>
+                            <li><a href="references.php"><button class="btn btn-default go"> Références </button></a></li>
+                            <li><a href="contact.php"><button class="btn btn-default go"> Contact </button></a></li>
                         </ul>
                     </div>
 

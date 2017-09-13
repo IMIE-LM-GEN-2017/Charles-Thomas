@@ -120,7 +120,7 @@ if ($testDuFormulaire === False) {
                     <input type="password" class="form-control" id="mdp2" name="mdp2"
                            placeholder="Confirmation du Mot de Passe">
                 </div>
-                <button type="submit" class="btn btn-default go">Go!</button>
+                <a href="connexion.php"><button class="btn btn-default go">Inscription</button></a>
             </form>
         </div>
         <!-- menu footer -->

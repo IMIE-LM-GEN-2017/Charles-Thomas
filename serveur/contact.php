@@ -24,15 +24,15 @@
                       </br></div>
                         <div class="col-lg-4 col-lg-offset-2 text-center">
                           <i class="fa fa-envelope-o fa-3x sr-contact"></i>
-                            <a href="mailto:charles.renaultclogenson@gmail.com" style="color:#004082"><img class="img-img" src="img/arobase.png"></a>
-                            <a href="https://fr.linkedin.com/in/charles-renault-clogenson-349aa0133"><img class="img-img" src="img/linkedin.jpg"></a>
-                            <a href="https://twitter.com/charles_rc1?lang=fr"><img class="img-img" src="img/twitter.jpg"></a>
+                            <a href="mailto:charles.renaultclogenson@gmail.com" style="color:#004082"><img class="leslogos" src="img/arobase.png"></a>
+                            <a href="https://fr.linkedin.com/in/charles-renault-clogenson-349aa0133"><img class="leslogos" src="img/linkedin.jpg"></a>
+                            <a href="https://twitter.com/charles_rc1?lang=fr"><img class="leslogos" src="img/twitter.jpg"></a>
                         </div>
                         <div class="col-lg-4 text-center">
                             <i class="fa fa-envelope-o fa-3x sr-contact"></i>
-                            <a href="mailto:maclune@live.fr" style="color:#004082"><img class="img-img" src="img/arobase.png"></a>
-                            <a href="https://fr.linkedin.com/in/thomas-maclune-89927171/"><img class="img-img" src="img/linkedin.jpg"></a>
-                            <a href="https://twitter.com/studio_321"><img class="img-img" src="img/twitter.jpg"></a>
+                            <a href="mailto:maclune@live.fr" style="color:#004082"><img class="leslogos" src="img/arobase.png"></a>
+                            <a href="https://fr.linkedin.com/in/thomas-maclune-89927171/"><img class="leslogos" src="img/linkedin.jpg"></a>
+                            <a href="https://twitter.com/studio_321"><img class="leslogos" src="img/twitter.jpg"></a>
                         </div>
                         </div>
               </div>
