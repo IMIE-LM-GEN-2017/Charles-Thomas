@@ -9,7 +9,7 @@
     <!-- character set ( afiichage des caractéres ) -->
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <!-- compatibilité avec les navigateurs -->
-    <title>Nounce</title>
+    <title>Nounce test</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
