@@ -28,7 +28,7 @@
 <!-- Barre de menu -->
 <div class="container-fluid">
     <div class="row" id="page">
-        <div class="col-md-1 col-sm-4"><a href="welcome.blade.php"><img src="img/nouncemenu.png" height="120%" width="120%"></a></div>
+        <div class="col-md-1 col-sm-4"><a href="index.html"><img src="img/nouncemenu.png" height="120%" width="120%"></a></div>
         <div class="col-md-10"></div>
         <div class="col-md-1 text-center" onclick="openNav()">
             <span class="glyphicon glyphicon-th-large"></span>
