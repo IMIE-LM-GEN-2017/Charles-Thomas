@@ -2,12 +2,11 @@
 /* Index */
 body{
     font-family: 'Roboto Slab', serif;
-
 }
 
-.row.home {
-    background-color: white;
-    color: #005cff;
+.home {
+    background-color: #005cff;
+    color : #ffffff;
 }
 
 #logo {

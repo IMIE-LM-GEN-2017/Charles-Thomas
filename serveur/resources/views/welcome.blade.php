@@ -1,3 +1,7 @@
+@extends('layouts.app')
+
+@section('title', 'Nounce')
+@section('content')
 
         <!doctype html>
 <html lang="fr">
@@ -14,12 +18,12 @@
     <link rel="apple-touch-icon" href="apple-touch-icon.png">
 
     <!-- Déclaration Bootstrap -->
-    <link rel="stylesheet" href="../views/css/bootstrap.css">
-    <link rel="stylesheet" href="../views/css/main.css">
+    <link rel="stylesheet" href="{{asset('css/bootstrap.css')}}">
+    <link rel="stylesheet" href="{{asset('css/main.css')}}">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
 
     <!-- Scripts JS -->
-    <script src="../views/js/bootstrap.js"></script>
+    <script src="{{asset('js/bootstrap.js')}}"></script>
 
     <!-- Google Font -->
     <style>
@@ -30,11 +34,11 @@
 <body style="background-color: #005cff;">
 
 <div class="container-fluid">
-    <div class="row home">
+    <div class="home">
         <div class="col-md-12 text-center">
             <img src="img/nouncehome.png" id="logo"></img>
             <h4> Vous n'êtes plus seuls, Nounce sommes là </h4>
-            <a href="../views/auth/register.blade.php"><button class="btn-outline-secondary"> Inscription </button></a>
+            <a href="../public/register"><button class="btn-outline-secondary"> Inscription </button></a>
 
             <nav class="navbar navbar-default navbar-fixed-bottom">
                 <div class="container-fluid" id="menu-principal">
@@ -50,18 +54,42 @@
                     <div class="collapse navbar-collapse" id="menu">
                         <ul class="nav navbar-nav">
                             <li><a href="index.html"><img src="img/logomenu.png"></a></li>
-                            <li><a href="presentation.blade.php"> Présentation </a></li>
+                            <li><a href="{{ route('presentation') }}"> Présentation </a></li>
                             <li><a href="recherche.php"> Recherche </a></li>
                             <li><a href="references.php"> Références </a></li>
-                            <li><a href="[[ route('contact') ]]"> Contact </a></li>
+                            <li><a href="{{ route('contact') }}"> Contact </a></li>
                         </ul>
-                        <form class="navbar-form navbar-right">
-                            <div class="form-group">
-                                <input type="text" class="form-control sub" value="<?php if (isset($_POST['login'])) echo htmlentities(trim($_POST['login'])); ?>" placeholder="Adresse Mail">
+                        <form class="navbar-form navbar-right" method="POST" action="{{ route('login') }}">
+                            {{ csrf_field() }}
+
+                            <div class="form-group{{ $errors->has('email') ? ' has-error' : '' }}">
+                                <label for="email"></label>
+
+                                <div class="col-md-6">
+                                    <input id="email" type="email" class="form-control sub" name="email" placeholder="Adresse Mail" value="{{ old('email') }}" required autofocus>
+
+                                    @if ($errors->has('email'))
+                                        <span class="help-block">
+                                        <strong>{{ $errors->first('email') }}</strong>
+                                    </span>
+                                    @endif
+                                </div>
                             </div>
-                            <div class="form-group">
-                                <input type="password" class="form-control sub" value="<?php if (isset($_POST['pass'])) echo htmlentities(trim($_POST['pass'])); ?>"placeholder="Mot de Passe">
+
+                            <div class="form-group{{ $errors->has('password') ? ' has-error' : '' }}">
+                                <label for="password"></label>
+
+                                <div class="col-md-6">
+                                    <input id="password" type="password" class="form-control sub" name="password"  placeholder="Password" required >
+
+                                    @if ($errors->has('password'))
+                                        <span class="help-block">
+                                        <strong>{{ $errors->first('password') }}</strong>
+                                    </span>
+                                    @endif
+                                </div>
                             </div>
+
                             <button type="submit" class="btn btn-default go">Connexion</button>
                         </form>
                     </div>
@@ -72,3 +100,4 @@
 </div>
 </body>
 </html>
+@endsection

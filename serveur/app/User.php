@@ -30,12 +30,13 @@ class User extends Authenticatable
     public function destination(){
         return $this->hasMany('App\Destination');
     }
-
     public function habite(){
-        return $this->hasMany('App\Habite', 'id_users');
+        return $this->hasMany('App\Habite');
     }
-
     public function parle(){
         return $this->hasMany('App\Parle');
+    }
+    public function langues(){
+        return $this->hasMany('App\Langues');
     }
 }
