@@ -1,9 +1,0 @@
-# Virtual machine
-/.vagrant/
-/puphpet/config-custom.yaml
-/puphpet/files/dot/ssh/
-
-# Config
-/serveur/include/db.php
-
-WebDesign/
