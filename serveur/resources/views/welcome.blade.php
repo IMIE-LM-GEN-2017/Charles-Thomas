@@ -14,12 +14,12 @@
     <link rel="apple-touch-icon" href="apple-touch-icon.png">
 
     <!-- Déclaration Bootstrap -->
-    <link rel="stylesheet" href="{{asset('css/bootstrap.css')}}">
-    <link rel="stylesheet" href="{{asset('views/css/main.css')}}">
+    <link rel="stylesheet" href="../views/css/bootstrap.css">
+    <link rel="stylesheet" href="../views/css/main.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
 
     <!-- Scripts JS -->
-    <script src="{{asset('js/bootstrap.js')}}"></script>
+    <script src="../views/js/bootstrap.js"></script>
 
     <!-- Google Font -->
     <style>
