@@ -9,7 +9,7 @@
     <!-- character set ( afiichage des caractéres ) -->
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <!-- compatibilité avec les navigateurs -->
-    <title>Nounce test</title>
+    <title>Nounce</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -30,7 +30,7 @@
     <div class="row">
         <div class="col-md-8 col-md-offset-2">
             <div class="panel panel-default">
-                <div class="panel-heading">Inscription</div>
+                <div class="panel-heading">Inscription tesssst</div>
 
                 <div class="panel-body">
                     <form method="POST" action="{{ route('register') }}">
