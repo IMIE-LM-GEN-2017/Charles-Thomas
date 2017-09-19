@@ -1,73 +1,60 @@
-<!doctype html>
-<html lang="fr">
-<head>
-    <meta charset="utf-8">
-    <!-- character set ( afiichage des caractéres ) -->
-    <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <!-- compatibilité avec les navigateurs -->
-    <title>Nounce</title>
-    <meta name="description" content="">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+<?php
 
-    <!-- Place favicon.ico in the root directory -->
-    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+/**
+ * Laravel - A PHP Framework For Web Artisans
+ *
+ * @package  Laravel
+ * @author   Taylor Otwell <taylor@laravel.com>
+ */
 
-    <!-- Déclaration Bootstrap -->
-    <link rel="stylesheet" href="css/bootstrap.css">
-    <link rel="stylesheet" href="css/main.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+define('LARAVEL_START', microtime(true));
 
-    <!-- Scripts JS -->
-    <script src="js/bootstrap.js"></script>
+/*
+|--------------------------------------------------------------------------
+| Register The Auto Loader
+|--------------------------------------------------------------------------
+|
+| Composer provides a convenient, automatically generated class loader for
+| our application. We just need to utilize it! We'll simply require it
+| into the script here so that we don't have to worry about manual
+| loading any of our classes later on. It feels great to relax.
+|
+*/
 
-    <!-- Google Font -->
-    <style>
-        @import url('https://fonts.googleapis.com/css?family=Roboto+Slab:400,700');
-    </style>
+require __DIR__.'/../vendor/autoload.php';
 
-</head>
-<body style="background-color: #005cff;">
+/*
+|--------------------------------------------------------------------------
+| Turn On The Lights
+|--------------------------------------------------------------------------
+|
+| We need to illuminate PHP development, so let us turn on the lights.
+| This bootstraps the framework and gets it ready for use, then it
+| will load up this application so that we can run it and send
+| the responses back to the browser and delight our users.
+|
+*/
 
-<div class="container-fluid">
-    <div class="row home">
-        <div class="col-md-12 text-center">
-            <img src="img/nouncehome.png" id="logo"></img>
-            <h4> Vous n'êtes plus seuls, Nounce sommes là </h4>
-            <a href="inscription.php"><button class="btn-outline-secondary"> Inscription </button></a>
+$app = require_once __DIR__.'/../bootstrap/app.php';
 
-            <nav class="navbar navbar-default navbar-fixed-bottom">
-                <div class="container-fluid" id="menu-principal">
-                    <div class="navbar-header">
-                        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#menu" aria-haspopup="true">
-                            <span class="sr-only">Toggle navigation</span>
-                            <span class="icon-bar"></span>
-                            <span class="icon-bar"></span>
-                            <span class="icon-bar"></span>
-                        </button>
-                    </div>
+/*
+|--------------------------------------------------------------------------
+| Run The Application
+|--------------------------------------------------------------------------
+|
+| Once we have the application, we can handle the incoming request
+| through the kernel, and send the associated response back to
+| the client's browser allowing them to enjoy the creative
+| and wonderful application we have prepared for them.
+|
+*/
 
-                    <div class="collapse navbar-collapse" id="menu">
-                        <ul class="nav navbar-nav">
-                            <li><a href="index.html"><img src="img/logomenu.png"></a></li>
-                            <li><a href="presentation.php"> Présentation </a></li>
-                            <li><a href="recherche.php"> Recherche </a></li>
-                            <li><a href="references.php"> Références </a></li>
-                            <li><a href="contact.php"> Contact </a></li>
-                        </ul>
-                        <form class="navbar-form navbar-right">
-                            <div class="form-group">
-                                <input type="text" class="form-control sub" value="<?php if (isset($_POST['login'])) echo htmlentities(trim($_POST['login'])); ?>" placeholder="Adresse Mail">
-                            </div>
-                            <div class="form-group">
-                                <input type="password" class="form-control sub" value="<?php if (isset($_POST['pass'])) echo htmlentities(trim($_POST['pass'])); ?>"placeholder="Mot de Passe">
-                            </div>
-                            <button type="submit" class="btn btn-default go">Connexion</button>
-                        </form>
-                    </div>
-                </div>
-            </nav>
-        </div>
-    </div>
-</div>
-</body>
-</html>
+$kernel = $app->make(Illuminate\Contracts\Http\Kernel::class);
+
+$response = $kernel->handle(
+    $request = Illuminate\Http\Request::capture()
+);
+
+$response->send();
+
+$kernel->terminate($request, $response);

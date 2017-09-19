@@ -15,10 +15,10 @@ class CreateLanguesTable extends Migration
     {
         Schema::create('langues', function (Blueprint $table) {
             $table->increments('id');
-            $table->integer('id_users')->unsigned();
+            $table->integer('users_id')->unsigned();
             $table->string('langue');
 
-            $table->foreign('id_users')->references('id')->on('users');
+            $table->foreign('users_id')->references('id')->on('users');
         });
     }
 

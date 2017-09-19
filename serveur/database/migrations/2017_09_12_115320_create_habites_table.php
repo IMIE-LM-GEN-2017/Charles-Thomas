@@ -15,12 +15,12 @@ class CreateHabitesTable extends Migration
     {
         Schema::create('habites', function (Blueprint $table) {
             $table->increments('id');
-            $table->integer('id_users')->unsigned();
-            $table->integer('id_pays')->unsigned();
+            $table->integer('users_id')->unsigned();
+            $table->integer('pays_id')->unsigned();
             $table->timestamps();
 
-            $table->foreign('id_users')->references('id')->on('users');
-            $table->foreign('id_pays')->references('id')->on('pays');
+            $table->foreign('users_id')->references('id')->on('users');
+            $table->foreign('pays_id')->references('id')->on('pays');
         });
     }
 

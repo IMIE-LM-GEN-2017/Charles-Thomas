@@ -1,95 +1,97 @@
 <!doctype html>
-<html lang="{{ app()->getLocale() }}">
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+<html lang="fr">
+<head>
+    <meta charset="utf-8">
+    <!-- character set ( afiichage des caractéres ) -->
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <!-- compatibilité avec les navigateurs -->
+    <title>Nounce</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <title>Laravel</title>
+    <!-- Place favicon.ico in the root directory -->
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
 
-        <!-- Fonts -->
-        <link href="https://fonts.googleapis.com/css?family=Raleway:100,600" rel="stylesheet" type="text/css">
+    <!-- Déclaration Bootstrap -->
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/main.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
 
-        <!-- Styles -->
-        <style>
-            html, body {
-                background-color: #fff;
-                color: #636b6f;
-                font-family: 'Raleway', sans-serif;
-                font-weight: 100;
-                height: 100vh;
-                margin: 0;
-            }
+    <!-- Scripts JS -->
+    <script src="js/bootstrap.js"></script>
 
-            .full-height {
-                height: 100vh;
-            }
+    <!-- Google Font -->
+    <style>
+        @import url('https://fonts.googleapis.com/css?family=Roboto+Slab:400,700');
+    </style>
 
-            .flex-center {
-                align-items: center;
-                display: flex;
-                justify-content: center;
-            }
+</head>
+<body style="background-color: #005cff;">
 
-            .position-ref {
-                position: relative;
-            }
+<div class="container-fluid">
+    <div class="row home">
+        <div class="col-md-12 text-center">
+            <img src="img/nouncehome.png" id="logo"></img>
+            <h4> Vous n'êtes plus seuls, Nounce sommes là </h4>
+            <a href="inscription.php"><button class="btn-outline-secondary"> Inscription </button></a>
 
-            .top-right {
-                position: absolute;
-                right: 10px;
-                top: 18px;
-            }
+            <nav class="navbar navbar-default navbar-fixed-bottom">
+                <div class="container-fluid" id="menu-principal">
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#menu" aria-haspopup="true">
+                            <span class="sr-only">Toggle navigation</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                    </div>
 
-            .content {
-                text-align: center;
-            }
+                    <div class="collapse navbar-collapse" id="menu">
+                        <ul class="nav navbar-nav">
+                            <li><a href="index.html"><img src="img/logomenu.png"></a></li>
+                            <li><a href="{{ route('presentation') }}"> Présentation </a></li>
+                            <li><a href="recherche.php"> Recherche </a></li>
+                            <li><a href="references.php"> Références </a></li>
+                            <li><a href="{{ route('contact') }}"> Contact </a></li>
+                        </ul>
+                        <form class="navbar-form navbar-right" method="POST" action="{{ route('login') }}">
+                                {{ csrf_field() }}
 
-            .title {
-                font-size: 84px;
-            }
+                                <div class="form-group{{ $errors->has('email') ? ' has-error' : '' }}">
+                                    <label for="email"></label>
 
-            .links > a {
-                color: #636b6f;
-                padding: 0 25px;
-                font-size: 12px;
-                font-weight: 600;
-                letter-spacing: .1rem;
-                text-decoration: none;
-                text-transform: uppercase;
-            }
+                                    <div class="col-md-6">
+                                        <input id="email" type="email" class="form-control sub" name="email" placeholder="Adresse Mail" value="{{ old('email') }}" required autofocus>
 
-            .m-b-md {
-                margin-bottom: 30px;
-            }
-        </style>
-    </head>
-    <body>
-        <div class="flex-center position-ref full-height">
-            @if (Route::has('login'))
-                <div class="top-right links">
-                    @auth
-                        <a href="{{ url('/home') }}">Home</a>
-                    @else
-                        <a href="{{ route('login') }}">Login</a>
-                        <a href="{{ route('register') }}">Register</a>
-                    @endauth
+                                        @if ($errors->has('email'))
+                                            <span class="help-block">
+                                        <strong>{{ $errors->first('email') }}</strong>
+                                    </span>
+                                        @endif
+                                    </div>
+                                </div>
+
+                                <div class="form-group{{ $errors->has('password') ? ' has-error' : '' }}">
+                                    <label for="password"></label>
+
+                                    <div class="col-md-6">
+                                        <input id="password" type="password" class="form-control sub" name="password"  placeholder="Password" required >
+
+                                        @if ($errors->has('password'))
+                                            <span class="help-block">
+                                        <strong>{{ $errors->first('password') }}</strong>
+                                    </span>
+                                        @endif
+                                    </div>
+                                </div>
+
+                                <button type="submit" class="btn btn-default go">Connexion</button>
+                        </form>
+                    </div>
                 </div>
-            @endif
-
-            <div class="content">
-                <div class="title m-b-md">
-                    Laravel
-                </div>
-
-                <div class="links">
-                    <a href="https://laravel.com/docs">Documentation</a>
-                    <a href="https://laracasts.com">Laracasts</a>
-                    <a href="https://laravel-news.com">News</a>
-                    <a href="https://forge.laravel.com">Forge</a>
-                    <a href="https://github.com/laravel/laravel">GitHub</a>
-                </div>
-            </div>
+            </nav>
         </div>
-    </body>
+    </div>
+</div>
+</body>
 </html>

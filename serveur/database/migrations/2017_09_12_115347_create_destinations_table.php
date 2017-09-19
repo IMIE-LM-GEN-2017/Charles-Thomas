@@ -15,11 +15,11 @@ class CreateDestinationsTable extends Migration
     {
         Schema::create('destinations', function (Blueprint $table) {
             $table->increments('id');
-            $table->integer('id_users')->unsigned();
-            $table->integer('id_voyages')->unsigned();
+            $table->integer('users_id')->unsigned();
+            $table->integer('voyages_id')->unsigned();
 
-            $table->foreign('id_users')->references('id')->on('users');
-            $table->foreign('id_voyages')->references('id')->on('voyages');
+            $table->foreign('users_id')->references('id')->on('users');
+            $table->foreign('voyages_id')->references('id')->on('voyages');
         });
     }
 
